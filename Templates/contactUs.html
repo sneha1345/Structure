@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <!-- INTERNAL CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: 
+                url("https://images.unsplash.com/photo-1526779259212-939e64788e3c?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") 
+                no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .contact-section {
+            background: #ffffff;
+            width: 90%;
+            max-width: 450px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+            text-align: center;
+            animation: fadeIn 1s ease;
+        }
+
+        .contact-section h1 {
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .contact-section p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+            padding: 12px 10px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .input-group textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .input-group input:focus,
+        .input-group textarea:focus {
+            border-color: #0077ff;
+        }
+
+        .input-group label {
+            position: absolute;
+            left: 12px;
+            top: 14px;
+            color: #777;
+            pointer-events: none;
+            transition: 0.3s;
+            background: #fff;
+            padding: 0 5px;
+        }
+
+        .input-group input:focus + label,
+        .input-group input:valid + label,
+        .input-group textarea:focus + label,
+        .input-group textarea:valid + label {
+            top: -10px;
+            font-size: 12px;
+            color: #0077ff;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #0077ff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #005fcc;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contact-section">
+        <h1>Contact Us</h1>
+        <p>We would love to hear from you</p>
+
+        <form>
+            <div class="input-group">
+                <input type="text" required>
+                <label>Your Name</label>
+            </div>
+
+            <div class="input-group">
+                <input type="email" required>
+                <label>Your Email</label>
+            </div>
+
+            <div class="input-group">
+                <textarea required></textarea>
+                <label>Your Message</label>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+</body>
+</html>
